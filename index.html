@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!---head section nav-bar start-->
+    <nav class="navbar navbar-expand-lg py-3 px-4 custom-navbar">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand d-flex align-items-center gap-2 d-none d-lg-flex"
+          href="#"
+        >
+          <img
+            src="./images/logo.png"
+            alt="Logo"
+            width="32"
+            height="32"
+            style="object-fit: contain"
+          />
+          <span>Eventsphere</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Logo and Eventsphere for small screens inside hamburger -->
+          <div
+            class="d-lg-none mb-3 d-flex align-items-center gap-2 justify-content-center"
+          >
+            <img
+              src="./images/logo.png"
+              alt="Logo"
+              width="32"
+              height="32"
+              style="object-fit: contain"
+            />
+            <span class="fw-bold text-white">Eventsphere</span>
+          </div>
+          <ul class="navbar-nav me-auto mb-5 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#featured-events">Upcoming Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search" onsubmit="return false;">
+            <input
+              id="eventSearchInput"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search events..."
+              aria-label="Search"
+              autocomplete="off"
+            />
+            <button
+              class="btn btn-outline-success"
+              type="button"
+              id="eventSearchBtn"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!---head section nav-bar end-->
+    <!--hero section start-->
+    <section
+      class="hero-section d-flex align-items-center justify-content-center"
+      style="
+        min-height: 100vh;
+        background: url('./images/hero.jpg') center/cover no-repeat;
+      "
+    >
+      <div class="container text-center">
+        <h1
+          class="hero-title display-4 fw-bold text-white"
+          style="text-shadow: 2px 2px 8px #000"
+        >
+          <span class="d-block u-block">Discover</span>
+          <span class="d-block">Upcoming Events</span>
+        </h1>
+      </div>
+    </section>
+    <!--hero section end-->
+
+    <!--feature section start-->
+    <section class="feature-section py-5 bg-light" id="featured-events">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Featured Events</h2>
+        <div class="row g-4" id="eventCardsContainer">
+          <!-- Event Card 1 -->
+          <div class="col-md-6 col-lg-4 event-card-item">
+            <div class="card event-card h-100 border-0 shadow">
+              <div
+                class="event-card-img"
+                style="background-image: url('./images/tech.jpg')"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Tech Conference 2025</h5>
+                <p class="event-meta mb-1">
+                  <strong>Date & Time:</strong> Sep 10, 2025, 10:00 AM
+                </p>
+                <p class="event-meta mb-1">
+                  <strong>Venue:</strong> Grand Hall, City Center
+                </p>
+                <p class="card-text">
+                  Join industry leaders and tech enthusiasts for a day of
+                  innovation, networking, and learning.
+                </p>
+                <a href="event-detail.html" class="btn btn-primary"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Event Card 2 -->
+          <div class="col-md-6 col-lg-4 event-card-item">
+            <div class="card event-card h-100 border-0 shadow">
+              <div
+                class="event-card-img"
+                style="background-image: url('./images/art.jpg')"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Art & Culture Fest</h5>
+                <p class="event-meta mb-1">
+                  <strong>Date & Time:</strong> Sep 15, 2025, 2:00 PM
+                </p>
+                <p class="event-meta mb-1">
+                  <strong>Venue:</strong> Riverside Park
+                </p>
+                <p class="card-text">
+                  Experience a vibrant celebration of art, music, and local
+                  culture with live performances and exhibits.
+                </p>
+                <a href="event-art.html" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Event Card 3 -->
+          <div class="col-md-6 col-lg-4 event-card-item">
+            <div class="card event-card h-100 border-0 shadow">
+              <div
+                class="event-card-img"
+                style="background-image: url('./images/startup.jpg')"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Startup Pitch Night</h5>
+                <p class="event-meta mb-1">
+                  <strong>Date & Time:</strong> Sep 20, 2025, 6:00 PM
+                </p>
+                <p class="event-meta mb-1">
+                  <strong>Venue:</strong> Innovation Hub
+                </p>
+                <p class="card-text">
+                  Watch emerging startups pitch their ideas to investors and
+                  industry experts. Open networking after!
+                </p>
+                <a href="event-startup.html" class="btn btn-primary"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Event Card 4 -->
+          <div class="col-md-6 col-lg-4 event-card-item">
+            <div class="card event-card h-100 border-0 shadow">
+              <div
+                class="event-card-img"
+                style="background-image: url('./images/health.jpg')"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Health & Wellness Expo</h5>
+                <p class="event-meta mb-1">
+                  <strong>Date & Time:</strong> Sep 25, 2025, 9:00 AM
+                </p>
+                <p class="event-meta mb-1">
+                  <strong>Venue:</strong> Expo Center
+                </p>
+                <p class="card-text">
+                  Explore the latest in health, fitness, and wellness with
+                  workshops, demos, and expert talks.
+                </p>
+                <a href="event-health.html" class="btn btn-primary"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Event Card 5 -->
+          <div class="col-md-6 col-lg-4 event-card-item">
+            <div class="card event-card h-100 border-0 shadow">
+              <div
+                class="event-card-img"
+                style="background-image: url('./images/food.jpg')"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Food Carnival</h5>
+                <p class="event-meta mb-1">
+                  <strong>Date & Time:</strong> Sep 28, 2025, 12:00 PM
+                </p>
+                <p class="event-meta mb-1">
+                  <strong>Venue:</strong> Downtown Plaza
+                </p>
+                <p class="card-text">
+                  Taste culinary delights from around the world at this
+                  fun-filled food festival for all ages.
+                </p>
+                <a href="event-food.html" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Event Card 6 -->
+          <div class="col-md-6 col-lg-4 event-card-item">
+            <div class="card event-card h-100 border-0 shadow">
+              <div
+                class="event-card-img"
+                style="background-image: url('./images/music.jpg')"
+              ></div>
+              <div class="card-body">
+                <h5 class="card-title">Music Night Live</h5>
+                <p class="event-meta mb-1">
+                  <strong>Date & Time:</strong> Sep 30, 2025, 7:00 PM
+                </p>
+                <p class="event-meta mb-1">
+                  <strong>Venue:</strong> Open Air Theatre
+                </p>
+                <p class="card-text">
+                  Enjoy an evening of live music performances by top bands and
+                  local artists under the stars.
+                </p>
+                <a href="event-music.html" class="btn btn-primary"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--feature section end-->
+
+    <footer class="footer-section glass-footer py-4 mt-5">
+      <div class="container text-center">
+        <div class="mb-2">
+          <a href="www.facebook.com" class="text-white mx-2 fs-4"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="www.x.com" class="text-white mx-2 fs-4"
+            ><i class="bi bi-twitter"></i
+          ></a>
+          <a href="www.instagram.com" class="text-white mx-2 fs-4"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="www.linkedin.com" class="text-white mx-2 fs-4"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+        </div>
+        <div class="text-white-50">
+          &copy; 2025 Eventsphere. All rights reserved.
+          dev-sohail Ahmad
+        </div>
+      </div>
+    </footer>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
